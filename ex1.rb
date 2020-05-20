@@ -11,7 +11,7 @@ class ContaBancaria
 
   def depositar(valor)
     @saldo += valor
-    puts "Valor depositado: R$#{'%.2f' % valor}\nNovo saldo: R$#{'%.2f' % @saldo}\n--------------------------------------"
+    puts "\nValor depositado: R$#{'%.2f' % valor}\n"
   end
 
   def sacar(valor)
@@ -19,25 +19,24 @@ class ContaBancaria
       valor = @saldo
     end
     @saldo -= valor
-    puts "Valor sacado: R$#{'%.2f' % valor}\nNovo saldo: R$#{'%.2f' % @saldo}\n--------------------------------------"
+    puts "\nValor sacado: R$#{'%.2f' % valor}\n"
   end
 
   def mostra_saldo()
-    puts "Saldo atual: R$#{'%.2f' % @saldo}\n--------------------------------------"
+    puts "\nSaldo atual: R$#{'%.2f' % @saldo}\n"
   end
 
   def mudar_telefone(novo_numero)
-    puts "Número antigo: #{@telefone}"
+    puts "\nNúmero de telefone alterado de #{@telefone} para #{novo_numero}\n"
     @telefone = novo_numero
-    puts "Número novo: #{@telefone}\n--------------------------------------"
   end
 
   def mostra_dados_pessoais()
-    puts "Nome: #{@nome}\nCPF: #{@cpf}\nTelefone: #{@telefone}\nIdade: #{@idade}\n--------------------------------------"
+    puts "\nNome: #{@nome}\nCPF: #{@cpf}\nTelefone: #{@telefone}\nIdade: #{@idade}\n"
   end
 
   def mostra_dados_conta()
-    puts "Número da conta: #{@numero_conta}\nSenha: #{@senha}\n--------------------------------------"
+    puts "\nNúmero da conta: #{@numero_conta}\nSenha: #{@senha}\n"
   end
 end
 
