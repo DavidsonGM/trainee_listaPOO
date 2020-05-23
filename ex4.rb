@@ -26,11 +26,9 @@ class Turma
 
   def aprovados
     @alunos.each do |a|
-      unless a["Nota"] == nil
         if a["Nota"] >= 5
           @n_aprovados += 1
           @@alunos_aprovados += 1
-        end
       end
     end
     return @n_aprovados/@alunos.length.to_f
