@@ -47,8 +47,8 @@ escolha = 0
 print "Digite sua opção:"
 while escolha != 7
 
-  puts
-"1. Depositar
+  puts "
+1. Depositar
 2. Sacar
 3. Exibir Saldo
 4. Modificar telefone
@@ -64,7 +64,7 @@ while escolha != 7
         if valor > 0
             conta.depositar(valor)
         else
-            puts "Valor inválido!\n\n"
+            puts "Valor inválido!\n"
         end
 
     when 2
@@ -73,7 +73,7 @@ while escolha != 7
         if valor > 0
             conta.sacar(valor)
         else
-            puts "Valor inválido!\n\n"
+            puts "Valor inválido!\n"
         end
 
     when 3
@@ -81,7 +81,7 @@ while escolha != 7
 
     when 4
         print "Novo número de telefone: "
-        numero = gets
+        numero = gets.chomp
         conta.mudar_telefone(numero)
 
     when 5
@@ -94,6 +94,6 @@ while escolha != 7
         break
 
     else
-        puts "Opção inválida.\nn"
+        puts "Opção inválida.\n"
     end
 end
