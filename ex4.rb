@@ -46,9 +46,9 @@ end
 for i in 1..n_turmas
   materia = materias.sample
   materias.delete(materia)
-  alunos = [{}]
+  alunos = []
   for i in 1..rand(5..20)
-    alunos[i - 1] = {"Nota" => rand(0.0..10.0), "Matrícula" => rand(100000000..210000000)}
+    alunos << {"Nota" => rand(0.0..10.0), "Matrícula" => rand(100000000..210000000)}
   end
   Turma.new(materia, alunos)
 end

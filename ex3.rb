@@ -113,8 +113,16 @@ class ContaPoupanca < Pessoa
   end
 end
 
+print "Digite seu nome: "
+nome = gets.chomp
+print "Digite seu cpf: "
+cpf = gets.chomp
+print "Digite seu número de telefone: "
+numero = gets.chomp
+print "Digite sua idade: "
+idade = gets.to_i
 
-pessoa = Pessoa.new("David Mendes", "883.039.972-20", "(11) 4002-8922", 18)
+pessoa = Pessoa.new(nome , cpf, numero, idade)
 
 #Menu 1
 escolha = -1
